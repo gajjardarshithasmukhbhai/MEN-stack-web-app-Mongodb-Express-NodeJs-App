@@ -1,0 +1,48 @@
+.cla
+{
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 7px 7px 9px #aaaaaa;
+  border-top: 3px solid blue;
+  border-left: 3px solid red;
+  border-right: 3px solid green;
+  border-bottom: 3px solid #F411EC;
+}
+.te{
+  font-family: 'Open Sans', sans-serif;
+  
+  display: flex;
+  color: white;
+  font-weight: 100;
+}
+.tx{
+  font-family: 'Open Sans', sans-serif;
+  margin-top: -2px;
+  display: flex;
+  color: white;
+  font-weight: 100;
+}
+.kk{
+	background-color:#00695c;
+}
+.form-elegant .font-small {
+    font-size: 0.8rem; }
+
+.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+.form-elegant .modal-header {
+    border-bottom: none; }
+
+.modal-dialog .form-elegant .btn .fab {
+    color: #2196f3!important; }
+
+.form-elegant .modal-body, .form-elegant .modal-footer {
+    font-weight: 400; }
