@@ -68,7 +68,9 @@ module.exports=class User{
 		return db.collection('user').
         	   find().toArray().
         	   then(products=>{
- 					return products;       	   	
+ 					
+                    return products; 
+
         	   }).catch(err=>{ 
         	   	return err});
         
@@ -93,6 +95,10 @@ module.exports=class User{
                         let final_value=Price*quantity;
 
                         Totalprice=Totalprice-final_value;
+                        if(Totalprice<0)
+                        {
+                            Totalprice=0;
+                        }
                         let iD=new mongodb.ObjectId(wer._id);
                         let Index=items_object.findIndex(pro=>pro.productId===id);
                         let Lol=items_object.splice(Index,1);

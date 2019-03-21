@@ -21,6 +21,7 @@ var CArtItem=require('./modal/carItem.js');//cart items
 app.set("view engine","pug");
 app.set("views","view");
 app.use("/mdB",express.static(path.join(__dirname,"mdBootstrap/")));
+
 app.use("/css",express.static(path.join(__dirname,"css/css/")));
 app.use("/bootstrap",express.static(path.join(__dirname,"node_modules/bootstrap/dist/css/")));
 app.use("/bootstrap-js",express.static(path.join(__dirname,"node_modules/bootstrap/dist/js/")));

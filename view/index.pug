@@ -4,10 +4,9 @@
   <title>hello</title>
   <link rel="stylesheet" type="text/css" href="/mdB/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/mdB/css/mdb.min.css">
-  <script src="/jquery/jquery.min.js"></script>
-  <script src="/bootstrap-js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="/css/css.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
 </head>
 <body>
 
@@ -43,67 +42,55 @@
   </ul>
 </div>
 </nav>
-<div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
-  <div class="text-white text-center py-5 px-4 my-5">
-    <div>
-      <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Create your beautiful website with Node,Express,Sequelize,MongoDb,Firebase,React,MySQL,PaymentGatway,MDBootstrap</strong></h2>
-      <p class="mx-5 mb-5">
-      </p>
-      <a class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> View project</a>
-    </div>
-  </div>
-</div>
-<!-- sksk -->
-<!-- Modal -->
-<div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <!--Content-->
-        <div class="modal-content form-elegant">
-            <!--Header-->
-            <div class="modal-header text-center">
-                <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <!--Body-->
-            <div class="modal-body mx-4">
-                <!--Body-->
-                <form action="/Add_Product" method="POST">
-                  <div class="md-form mb-5">
-                      <input type="email" id="Form-email1" class="form-control validate" placeholder="Your email" name="email"required>
-                      
-                  </div>
-                  <div class="md-form pb-3">
-                      <input type="password" id="Form-pass1" class="form-control validate" placeholder="Your password" name="password" required>
-                     
-                      <p class="font-small blue-text d-flex justify-content-end">Forgot Password?</p>
-                  </div>
-                  <div class="text-center mb-3">
-                      <button type="submit" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
-                  </div>
-                </form>
-                <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
-                    with
-                </p>
-                <div class="row my-3 d-flex justify-content-center">
-                    <!--Facebook-->
-                    <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
-                    <!--Twitter-->
-                    <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
-                    <!--Google +-->
-                    <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
-                </div>
-            </div>
-            <!--Footer-->
-            <div class="modal-footer mx-5 pt-3 mb-1">
-                <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
-                        Sign Up</a></p>
-            </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<div class="col-md-5">
+<div class="card">
+  <!-- Card content -->
+  <div class="card-body w-100">
+      <form action="/Add_Product" method="POST">
+        <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+        <div class="md-form mt-0">
+          <input type="email" id="materialRegisterFormEmail" class="form-control" name="email">
+          <label for="materialRegisterFormEmail"><b>E-mail</b></label>
         </div>
-        <!--/.Content-->
-    </div>
+        <div class="md-form">
+          <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock" name="password" >
+          <label for="materialRegisterFormPassword"><b>Password</b></label>
+          <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+              At least 8 characters and 1 digit
+          </small>
+        </div>
+         <div class="d-flex justify-content-around">
+            <div>
+              <!-- Remember me -->
+            </div>
+             <p class="font-small blue-text d-flex justify-content-end">Forgot Password?
+             </p>
+        </div>
+        <button type="submit" class="btn btn-outline-info waves-effect w-100">Login</button>
+        <div class="row my-3 d-flex justify-content-center">
+        <!--Facebook-->
+        <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f blue-text text-center"></i></button>
+        <!--Twitter-->
+        <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter blue-text"></i></button>
+        <!--Google +-->
+        <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g blue-text"></i></button>
+      </div>
+      </form>
+  </div>
+
 </div>
-<!-- Modal -->
+</div>
+</center>
+<script src="/mdb/js/jquery-3.3.1.min.js">
+</script>
+<script type="text/javascript" src="/mdb/js/mdb.min.js"></script>
+<script type="text/javascript" src="/mdb/js/bootstrap.min.js">
+</script>
 </body>
 </html>
