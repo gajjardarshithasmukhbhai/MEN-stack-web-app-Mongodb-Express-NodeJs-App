@@ -15,7 +15,14 @@ exports.add_product_data_controller=(req,res,next)=>{
 		let obj=new Database(req.body.Title,req.body.Image,req.body.price,req.body.description,UserId);
 		obj.save()
 		.then(resolve=>{
-			res.redirect("/shop");
+			if(resolve)
+			{
+				res.redirect("/shop");
+
+			}
+			else{
+				res.render("index");
+			}
 		}).catch(err=>{
 			console.log(err);
 			res.end();
@@ -39,16 +46,21 @@ exports.admin_delete_product_controller=(req,res,next)=>{
 exports.add_products_controller=(req,res,next)=>{
 	let email=req.body.email;
 	let password=req.body.password;
-	console.log("my Email",email,"my PAssWord",password);
-	User.saveUser(email,password)
-	.then(resolve=>{
-		res.redirect("/Add_product");//change res.redirect('Add_product');
-	})
-	.catch(err=>{
-		console.log(err);
-			res.end();
-	
-	});
+
+	if(email.length!=0&&password.length!=0)
+	{
+		User.saveUser(email,password)
+		.then(resolve=>{
+			res.redirect("/Add_product");//change res.redirect('Add_product');
+		})
+		.catch(err=>{
+			console.log(err);
+				res.end();		
+		});
+	}
+	else{
+			res.redirect("/Add_product");//change res.redirect('Add_product');
+	}
 }
 exports.admin_product_controller=(req,res,next)=>{
 	Database.fetchall().then((ata)=>{
@@ -194,7 +206,17 @@ exports.shop_controller=(req,res,next)=>{
 
 }
 exports.home_controller=(req,res,next)=>{
-	res.render("index");
+
+	Database.get_user().then(resolve=>{
+		if(resolve)
+			{
+				res.redirect("/shop");
+
+			}
+			else{
+				res.render("index",{wer:"your account is not verified"});
+			}
+	}).catch();
 }
 exports.add_product_controller=(req,res,next)=>{
 	res.render("Add_product");

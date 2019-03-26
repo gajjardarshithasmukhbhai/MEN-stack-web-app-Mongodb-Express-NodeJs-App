@@ -12,10 +12,26 @@ module.exports=class Product{
 	save()
 	{
         let db = getdb.getDb();//call the method
-        return db.collection('products').insertOne(this)
-        .catch(err => {
-            console.log(err);
-        });
+        let check_array=[];
+        return db.collection('user').find().toArray()
+        .then(ew=>{
+                check_array=ew;
+                if(check_array.length>0)//use che
+                {
+                    db.collection('products').insertOne(this)
+                    .catch(err => {
+                        console.log(err);
+                    });
+                    return true;
+                    
+                }
+                else{
+                    return false;
+                }
+            }
+        ).catch(err=>{console.log(err)});
+        
+        
 	}
 	static fetchall()
 	{
@@ -86,5 +102,27 @@ module.exports=class Product{
                catch(err=>{
                     console.log("My"+err);
                });
+    }
+    static get_user()
+    {
+        let db = getdb.getDb();//call the method
+        let check_array=[];
+        return db.collection('user').find().toArray()
+        .then(ew=>{
+                check_array=ew;
+                if(check_array.length>0)//use che
+                {
+                    db.collection('products').insertOne(this)
+                    .catch(err => {
+                        console.log(err);
+                    });
+                    return true;
+                    
+                }
+                else{
+                    return false;
+                }
+            }
+        ).catch(err=>{console.log(err)});
     }
 }
