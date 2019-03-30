@@ -1,3 +1,4 @@
+let Port=process.env.Port || 5060;
 const express=require('express');
 const app=express();
 const path=require('path');
@@ -55,5 +56,5 @@ app.use((req,res,next)=>{
 	
 // })
 mongoConnect(() => {
-    app.listen(5060, (wer) => console.log("i am new"));
+    app.listen(Port, (wer) => console.log("i am new"));
 });
